@@ -1,15 +1,5 @@
 # Dispatching Algorithm Benchmark
 
-## Example Output
-
-![Driver Status Plot](plots/plot_2025-07-20%2001-33-29_0.png)
-
-![Calls Completed Plot](plots/plot_2025-07-20%2001-33-29_1.png)
-
-![Dispatch Times Plot](plots/plot_2025-07-20%2001-33-29_2.png)
-
----
-
 ## Overview
 
 Working as a dispatcher, I noticed that manually locating tow trucks for members is inefficient. This project implements a dispatching algorithm that automatically assigns calls to drivers and benchmarks its performance.
@@ -19,6 +9,16 @@ Working as a dispatcher, I noticed that manually locating tow trucks for members
 - ✅ Simulates daily dispatch operations  
 - ✅ Generates diagnostic reports and plots  
 - ✅ Configurable environment and event probabilities
+
+## Example Output
+
+![Driver Status Plot](plots/plot_2025-07-20%2001-33-29_0.png)
+
+![Calls Completed Plot](plots/plot_2025-07-20%2001-33-29_1.png)
+
+![Dispatch Times Plot](plots/plot_2025-07-20%2001-33-29_2.png)
+
+---
 
 ## Purpose
 
