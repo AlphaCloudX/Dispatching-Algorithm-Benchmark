@@ -1,0 +1,69 @@
+# Environment configuration
+grid_length: 60          # Number of grid cells along the length
+grid_width: 60           # Number of grid cells along the width
+ticks_to_run: 480        # Total number of simulation ticks to run, 480 is a typical 8hr day
+
+random_seed: 64          # Seed for random number generation to ensure reproducibility
+
+# Driver configuration
+number_of_drivers: 20
+
+driver_vehicle_distribution:
+  flatbed: 6
+  wheel_lift_no_dollies: 4
+  wheel_lift_dollies: 2
+  light_service: 4
+  underground: 1
+  medium_duty: 2
+  heavy: 1
+  # motorcycle: 0
+
+
+# Calls configuration
+calls:
+  number_of_calls: 250
+  no_tow_chance: 0.2
+  tow_chance: 0.8
+  min_time_OL: 5
+  max_time_OL: 20
+
+  vehicles_allowed_for_no_tow:
+    - flatbed
+    - wheel_lift_no_dollies
+    - wheel_lift_dollies
+    - light_service
+    # - motorcycle
+
+  call_vehicle_distribution:
+    flatbed: 0.35
+    wheel_lift_no_dollies: 0.25
+    wheel_lift_dollies: 0.05
+    light_service: 0.1
+    underground: 0.05
+    medium_duty: 0.1
+    heavy: 0.1
+    # motorcycle: 0.05
+
+  # Call Events distribution configuration
+  call_frequency_distribution:
+    type: normal           # Distribution type: normal distribution
+    mean: 10               # Mean value for the normal distribution
+    std: 2                 # Standard deviation for the normal distribution
+    min: 1                 # Minimum clipped value
+    max: 20                # Maximum clipped value
+
+  call_breakdown_distribution:
+    type: uniform          # Distribution type: uniform distribution
+    min: 0.8               # Minimum multiplier for traffic conditions
+    max: 1.2              # Maximum multiplier for traffic conditions
+
+  call_dropoff_distribution:
+    type: uniform          # Distribution type: uniform distribution
+    min: 0.8               # Minimum multiplier for traffic conditions
+    max: 1.2              # Maximum multiplier for traffic conditions
+
+# Traffic distribution configuration
+traffic_distribution:
+  type: uniform          # Distribution type: uniform distribution
+  min: 0.8               # Minimum multiplier for traffic conditions
+  max: 1.2              # Maximum multiplier for traffic conditions
